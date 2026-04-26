@@ -115,8 +115,8 @@ function updateVideoInfo() {
         id: 'qkIYiP84Sng',
         title: 'PORQUE BRASILEIRO TEM MEDO DE DEIXAR DINHEIRO NO BANCO',
         description: 'Conteúdo de alta qualidade sobre finanças de forma visual e compreensível. Entenda os principais conceitos financeiros que impactam sua vida.',
-        date: '14 de Abril, 2026',
-        views: '46 visualizações'
+        date: '15 de Abril, 2026',
+        views: '56 visualizações'
     };
     
     // Você pode atualizar o título e descrição aqui quando postar um vídeo novo
