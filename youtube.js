@@ -4,28 +4,28 @@
 const MEUS_VIDEOS = [
     {
         link: 'https://www.youtube.com/watch?v=qkIYiP84Sng',
+        titulo: 'PORQUE BRASILEIRO TEM MEDO DE DEIXAR DINHEIRO NO BANCO',
         descricao: 'Análise profunda sobre a relação do brasileiro com instituições financeiras e como superar esse medo.'
     },
-    // Cole mais vídeos aqui:
-    // {
-    //     link: 'https://www.youtube.com/watch?v=ID_DO_VIDEO',
-    //     descricao: 'Descrição do vídeo'
-    // },
     {
-        link:"https://www.youtube.com/watch?v=P-3ofcXvMM4",
-        descricao: ""
+        link: 'https://www.youtube.com/watch?v=P-3ofcXvMM4',
+        titulo: 'COLOQUE O TÍTULO DESTE VÍDEO AQUI',
+        descricao: ''
     },
-
-
     {
-        link: "https://www.youtube.com/watch?v=rakk5cun-cU",
-        descricao:"4 Hábitos que te deixam pobre",
+        link: 'https://www.youtube.com/watch?v=rakk5cun-cU',
+        titulo: '4 HÁBITOS QUE TE DEIXAM POBRE',
+        descricao: '4 Hábitos que te deixam pobre'
     },
-
     {
-
-        link: "https://www.youtube.com/shorts/kq1fnrPdWMw",
-        descricao: ""   
+        link: 'https://www.youtube.com/shorts/kq1fnrPdWMw',
+        titulo: 'COLOQUE O TÍTULO DESTE SHORT AQUI',
+        descricao: 'Esse video fala sobre como alguem consegue comprar uma parte de uma empresa com pouco dinheiro'
+    },
+    {
+        link: 'https://www.youtube.com/shorts/a0qZleyQe9g',
+        titulo: 'COLOQUE O TÍTULO DESTE SHORT AQUI',
+        descricao: 'INVESTIR 100 reais todo mês pode te deixar rico? Descubra nesse video'
     }
 ];
 // ============================================
@@ -103,7 +103,6 @@ function extractVideoId(url) {
 
 // Criar o modal do player
 function createVideoModal() {
-    // Remove modal antigo se existir
     const oldModal = document.getElementById('video-modal');
     if (oldModal) oldModal.remove();
     
@@ -138,14 +137,13 @@ function createVideoModal() {
     
     document.body.appendChild(modal);
     
-    // Fechar modal
     const closeBtn = modal.querySelector('.video-modal-close');
     const backdrop = modal.querySelector('.video-modal-backdrop');
     
     function closeModal() {
         modal.classList.remove('active');
         const iframe = modal.querySelector('#youtube-player');
-        iframe.src = ''; // Para o vídeo
+        iframe.src = '';
         document.body.style.overflow = '';
         cursor.style.display = 'block';
     }
@@ -153,7 +151,6 @@ function createVideoModal() {
     closeBtn.addEventListener('click', closeModal);
     backdrop.addEventListener('click', closeModal);
     
-    // Fechar com ESC
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && modal.classList.contains('active')) {
             closeModal();
@@ -207,7 +204,6 @@ function createVideoCard(videoId, titulo, descricao, index) {
         </div>
     `;
     
-    // Clique abre o modal com player
     card.addEventListener('click', () => {
         openVideoInModal(videoId, titulo, descricao);
     });
@@ -246,11 +242,13 @@ function loadVideos() {
             return;
         }
         
-        console.log(`✅ Vídeo ${index + 1}: ${video.titulo} (${videoId})`);
+        const tituloFinal = video.titulo || 'Vídeo S-AMZIN';
+        
+        console.log(`✅ Vídeo ${index + 1}: ${tituloFinal} (${videoId})`);
         
         const card = createVideoCard(
             videoId, 
-            video.titulo || 'Vídeo S-AMZIN', 
+            tituloFinal, 
             video.descricao, 
             index
         );
@@ -258,10 +256,8 @@ function loadVideos() {
         grid.appendChild(card);
     });
     
-    // Inicializa o modal
     createVideoModal();
     
-    // Anima os cards
     requestAnimationFrame(() => {
         document.querySelectorAll('.video-card').forEach(card => {
             card.style.opacity = '1';
