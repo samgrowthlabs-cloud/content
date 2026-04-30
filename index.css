@@ -476,3 +476,7 @@ body {
         justify-content: center;
     }
 }
+
+.footer-links a[href^="mailto:"]:hover {
+    color: #ae00ff; /* cor diferente ao passar o mouse */
+}

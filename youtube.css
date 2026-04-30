@@ -676,3 +676,6 @@ body {
         font-size: 1.1rem;
     }
 }
+.footer-links a[href^="mailto:"]:hover {
+    color: #E1306C; /* cor diferente ao passar o mouse */
+}

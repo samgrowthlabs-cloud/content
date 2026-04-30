@@ -469,3 +469,6 @@ body {
         flex-wrap: wrap;
     }
 }
+.footer-links a[href^="mailto:"]:hover {
+    color: #E1306C; /* cor diferente ao passar o mouse */
+}
