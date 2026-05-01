@@ -13,26 +13,7 @@ const MEUS_VIDEOS = [
         descricao: ""
 
     },
-    {
-        link: 'https://www.youtube.com/watch?v=P-3ofcXvMM4',
-        titulo: 'COLOQUE O TÍTULO DESTE VÍDEO AQUI',
-        descricao: ''
-    },
-    {
-        link: 'https://www.youtube.com/watch?v=rakk5cun-cU',
-        titulo: '4 HÁBITOS QUE TE DEIXAM POBRE',
-        descricao: '4 Hábitos que te deixam pobre'
-    },
-    {
-        link: 'https://www.youtube.com/shorts/kq1fnrPdWMw',
-        titulo: 'COLOQUE O TÍTULO DESTE SHORT AQUI',
-        descricao: 'Esse video fala sobre como alguem consegue comprar uma parte de uma empresa com pouco dinheiro'
-    },
-    {
-        link: 'https://www.youtube.com/shorts/a0qZleyQe9g',
-        titulo: 'COLOQUE O TÍTULO DESTE SHORT AQUI',
-        descricao: 'INVESTIR 100 reais todo mês pode te deixar rico? Descubra nesse video'
-    }
+
 ];
 // ============================================
 
