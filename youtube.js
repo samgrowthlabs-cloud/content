@@ -8,6 +8,12 @@ const MEUS_VIDEOS = [
         descricao: 'Análise profunda sobre a relação do brasileiro com instituições financeiras e como superar esse medo.'
     },
     {
+        link: "https://www.youtube.com/watch?v=s_0k9bDAXxw&t=3s",
+        titulo: "VOCÊ NUNCA ESTEVE NO CONTROLE",
+        descricao: ""
+
+    },
+    {
         link: 'https://www.youtube.com/watch?v=P-3ofcXvMM4',
         titulo: 'COLOQUE O TÍTULO DESTE VÍDEO AQUI',
         descricao: ''
